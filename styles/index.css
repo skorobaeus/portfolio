@@ -1,0 +1,372 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100px; /* no, I'm not crazy */
+}
+
+body {
+  background-color: #fbfbfb;
+  color: #242424;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+}
+
+.languages {
+  position: relative;
+  overflow: hidden;
+}
+
+.language-eng, .language-rus {
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+  transition: position 0.4s ease-in, left 0.4s ease-in, opacity 0s linear;
+}
+
+.language-active {
+  position: relative;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease-out;  
+}
+
+.intro, .projects, .about {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.intro-title, .project-title, .about-title {
+  font-weight: 600;
+  text-transform: lowercase;
+}
+
+.intro-title, .about-title {
+  font-size: 179px;
+}
+
+.intro, .about {
+  min-height: 100vh;
+}
+
+.intro-ahead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 2rem;
+}
+
+.language-switch {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.language-switch:hover {
+  cursor: pointer;
+}
+
+.language-switch + .language-switch {
+  margin-left: 15px;
+}
+
+.language-switch + .language-switch::before {
+  content: '/';
+  position: absolute;
+  left: -11px;
+  font-weight: 400;
+}
+
+.language-switch-active {
+  font-weight: 700;
+}
+
+.language-switch {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portrait {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  background-color: #C4C4C4;
+}
+
+.intro-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: -0.1rem;
+  line-height: 1;
+}
+
+.intro-description {
+  width: 5rem;
+  margin-left: auto;
+}
+
+.intro-p + .intro-p {
+  margin-top: .25rem;
+}
+
+.project {
+  display: flex;
+}
+
+.project + .project {
+  margin-top: 2rem;
+}
+
+.project-header {
+  width: 6rem;
+}
+
+.project-date {
+  display: block;
+}
+
+.project-title {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 0.95;
+}
+
+.project-title-link {
+  color: inherit;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.25s linear;
+}
+
+.project-title-link:hover {
+  text-decoration-color: inherit;
+  transition: text-decoration-color 0.25s linear;
+}
+
+.project-title-shift {
+  display: block;
+  margin-left: 1rem;
+}
+
+.project-title-dash {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.project-title-dash::after {
+  content: "";
+  position: relative;
+  top: 0.05rem;
+  flex-grow: 1;
+  height: 0.1rem;
+  margin-left: 0.1rem;
+  background-color: currentColor;
+}
+
+.project-description {
+  width: 3rem;
+  margin-left: auto;
+}
+
+.project-p + .project-p {
+  margin-top: .25rem;
+}
+
+.project-info {
+  margin-left: 1rem;
+}
+
+.project-cover {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  background-color: #C4C4C4;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+}
+
+.about-title {
+  width: 8rem;
+  line-height: 0.85;
+}
+
+.about-description {
+  width: 3rem;
+  margin-left: 1rem;
+}
+
+.about-p + .about-p{
+  margin-top: 1rem;
+}
+
+.link {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;  
+  transition: transform 0.25s linear;
+}
+
+.link:hover::after {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s linear;
+}
+
+@media (max-width: 1500px) {
+  html {
+    font-size: 70px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .intro-ahead {
+    padding-right: 0;
+  }
+
+  .portrait {
+    width: 4rem;
+    height: 4rem;
+  }  
+
+  .intro-title, .about-title {
+    font-size: 128px;
+  }
+
+  .intro-description {
+    width: 7rem;
+    min-height: 4rem;
+  }
+
+  .project-description {
+    width: 4rem;
+  }
+
+  .project-cover {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .about-description {
+    width: 5rem;
+  }  
+}
+
+@media (max-width: 1050px) {
+  html {
+    font-size: 50px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .intro-title, .about-title {
+    font-size: 91px;
+  }
+
+  .project-description {
+    width: 5rem;
+  }
+
+  .project-cover {
+    height: 7rem;
+  }  
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 25px;
+  }
+
+  body {
+    font-size: 16px;
+  }  
+
+  .intro, .projects, .about {
+    max-width: none;
+  }
+
+  .intro-title, .about-title {
+    font-size: 45px;
+  }
+
+  .intro-description {
+    width: 100%;
+  }
+
+  .portrait {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .project {
+    display: block;
+  }
+
+  .project-header, .project-info {
+    width: 100%;
+  }
+
+  .project-title {
+    font-size: 40px;
+  }
+
+  .project-description {
+    width: calc(100% - 1rem);
+  }  
+
+  .project-info {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  .project-cover {
+    width: 100%;
+    height: 15rem;
+  }
+
+  .about-title {
+    position: absolute;
+    margin-top: -3rem;
+  }
+  
+  .about-description {
+    width: calc(100% - 1rem);
+  }
+
+  .about-p + .about-p {
+    margin-top: 2rem;
+  }  
+
+  .about-p:nth-of-type(3) {
+    margin-top: 7rem;
+  }
+}
