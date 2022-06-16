@@ -172,6 +172,38 @@ body {
   background-color: currentColor;
 }
 
+.project-title-link.not-ready {
+  position: relative;
+  text-decoration: none;
+}
+
+.language-eng .project-title-link.not-ready::after {
+  content: 'This project description is not ready yet. Please, come back later!';
+}
+
+.language-rus .project-title-link.not-ready::after {
+  content: 'Описание этого проекта пока не готово. Пожалуйста, возвращайтесь позже!';
+}
+
+.project-title-link.not-ready::after {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  display: none;
+  width: 260px;
+  padding: 10px 30px;
+  background-color: #242424;
+  color: #fbfbfb;
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: initial;
+  transform: translate(-50%, -100%);
+}
+
+.project-title-link.not-ready:hover::after {
+  display: block;
+}
+
 .project-description {
   width: 3rem;
   margin-left: auto;

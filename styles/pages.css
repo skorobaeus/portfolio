@@ -128,7 +128,7 @@ body {
 .project-description {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .project-p {
@@ -144,7 +144,7 @@ body {
 }
 
 .step + .step {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .step-row {
@@ -156,7 +156,7 @@ body {
   margin-left: 1rem;
 }
 
-.step-column .step-images {
+.step-column .project-description + .step-images {
   margin-top: 1rem;
 }
 
@@ -164,10 +164,15 @@ body {
   width: 4rem;
 }
 
+.step-p + .step-p {
+  margin-top: 17px;
+}
+
 .step-image {
-  min-height: 5rem;
+  /* min-height: 5rem; */
   object-fit: cover;
   background-color: #C4C4C4;
+  border: 1px solid #E1E1E1;
 }
 
 .step-images-single .step-image + .step-image {
