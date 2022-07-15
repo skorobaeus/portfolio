@@ -24,7 +24,9 @@ function toggleLanguage(switchesOn, switchesOff, boxOn, boxOff) {
   })  
   
   boxOn.classList.add('language-active')
-  boxOff.classList.remove('language-active') 
+  boxOff.classList.remove('language-active')
+
+  document.title = boxOn.dataset.title
 }
 
 function setLanguage() {
