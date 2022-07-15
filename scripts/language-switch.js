@@ -28,7 +28,10 @@ function toggleLanguage(switchesOn, switchesOff, boxOn, boxOff) {
 }
 
 function setLanguage() {
-  if (!userLanguage) window.localStorage.setItem("userLanguage", "eng")
+  if (userLanguage === null) {
+    window.localStorage.setItem("userLanguage", "eng")
+    toggleLanguage(engSwitches, rusSwitches, eng, rus)
+  }
   if (userLanguage === "eng") toggleLanguage(engSwitches, rusSwitches, eng, rus)
   if (userLanguage === "rus") toggleLanguage(rusSwitches, engSwitches, rus, eng)
 }
