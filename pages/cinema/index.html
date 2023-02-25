@@ -18,78 +18,61 @@
     <div class="language-eng" data-title="Portfolio: Go 2 The Cinema">
       <header class="project-summary">
         <div class="project-summary-ahead">
-          <h1 class="project-title">идём<span class="project-title-shift">вКино</span></h1>
+          <h1 class="project-title">Go2<span class="project-title-shift">theCinema</span></h1>
           <div class="language-switches"><button value="eng" class="language-switch language-switch-eng">eng</button><button value="rus" class="language-switch language-switch-rus">рус</button></div>   
         </div>
         <div class="project-description">
-          <p class="project-p">Doka is a ...</p>
-          <p class="project-p">Для этого проекта я делаю интерактивные примеры кода внутри статей.</p>
-          <p class="project-p">Использую Figma для дизайна, HTML, CSS, JS для вёрстки и Git.</p>
-          <p class="project-p">2019 — present</p>
+          <p class="project-p">A website for a fictional cinema. Contains two parts: user part for buying tickets, and administration part for setting cinema screenings and selling tickets.</p>
+          <p class="project-p">Task: design mobile client UI and desktop admin UI.</p>
+          <p class="project-p">Tools: Figma, HTML, CSS</p>
+          <p class="project-p">2018</p>
         </div>
       </header>
       <main class="project-steps">
         <div class="step step-row">
           <div class="step-description">
-            <p class="step-p"></p>
-            <p class="step-p"></p>
-          </div>
-          <div class="step-images step-images-single">
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-          </div>
-        </div>
-        <div class="step step-row">
-          <div class="step-description">
-            <p class="step-p"></p>
-            <p class="step-p"></p>
-          </div>
-          <div class="step-images step-images-single">
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-          </div>
-        </div>
-        <h2 class="project-subtitle">Design system development</h2>
-        <div class="step step-column">
-          <div class="step-description">
-            <p class="step-p"></p>
-            <p class="step-p"></p>
-          </div>
-          <div class="step-images step-images-single-huge">
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-          </div>
-        </div>
-        <div class="step step-column">
-          <div class="step-description">
-            <p class="step-p"></p>
-            <p class="step-p"></p>
-          </div>
-          <div class="step-images step-images-tripple">
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-          </div>
-        </div>
-        <div class="step step-row">
-          <div class="step-description">
-            <p class="step-p"></p>
-            <p class="step-p"></p>
+            <p class="step-p">Educational designs have a feature: they often contain only one version of design (mobile or desktop) to not overwhelm students. This, client site of the cinema has only the mobile version.</p>
+            <p class="step-p">Future client takes 4 steps: choose a cinema session, pick a seat, pays for a ticket, receives an e-ticket. I developed a screen for each step.</p>
+            <p class="step-p">My favorite part of it is a perforation of the ticket :)</p>
+            <p class="step-p">It's close to impossible to work with a seats scheme without zoom, so I made a permanent hint about zooming gesture.</p>
+            <p class="step-p">Payment is always done via side services, so I didn't design a screen for it.</p>            
           </div>
           <div class="step-images step-images-quad">
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
-            <a class="step-image-link" href="" target="_blank"><img class="step-image" src=""></a>
+            <a class="step-image-link" href="images/user-sessions.png" target="_blank"><img class="step-image" src="images/user-sessions.png"></a>
+            <a class="step-image-link" href="#" target="_blank"><img class="step-image" src=""></a>
+            <a class="step-image-link" href="images/user-scheme.png" target="_blank"><img class="step-image" src="images/user-scheme.png"></a>
+            <a class="step-image-link" href="images/user-scheme-zoom.png" target="_blank"><img class="step-image" src="images/user-scheme-zoom.png"></a>
+            <a class="step-image-link" href="images/user-ticket.png" target="_blank"><img class="step-image" src="images/user-ticket.png"></a>
+            <a class="step-image-link" href="images/user-ticket-qr.png" target="_blank"><img class="step-image" src="images/user-ticket-qr.png"></a>
           </div>
         </div>
         <div class="step step-row">
           <div class="step-description">
-            <p class="step-p">Работа над эти проектом продолжается по сей день, вы можете увидеть его весь и мой вклад на сайте doka.guide.</p>
+            <p class="step-p">Admin part of the site has only desktop layout.</p>
+            <p class="step-p">For running a cinema an admin needs such options:</p>
+            <ol class="step-list">
+              <li>creating and deleting of halls;</li>
+              <li>configure seat schemes of the halls;</li>
+              <li>setting prices;</li>
+              <li>adjusting sessions;</li>
+              <li>starting and finishing ticket sales.</li>
+            </ol>
+            <p class="step-p">Technical note had this options in a numbered list and it defined my way of thinking: I made the admin part in step-by-step form.</p>
+            <p class="step-p">If I was working on this project today, I would refused the step-by-step form and would offered a more convinient navigation.</p>
+          </div>
+          <div class="step-images step-images-single">
+            <a class="step-image-link" href="images/admin.png" target="_blank"><img class="step-image" src="images/admin.png"></a>
+          </div>
+        </div>        
+        <div class="step step-row">
+          <div class="step-description">
+            <p class="step-p">Source code is availible in my <a class="link" href="https://github.com/skorobaeus/go2cinema">repo</a>.</p>
           </div>
           <div class="step-footer">
-            <a class="link" href="../../index.html">Back to main page</a>
+            <a class="link" href="../../index.html">Back to the main page</a>
           </div>
         </div>                                     
-      </main>      
+      </main>
     </div>
 
     <div class="language-rus" data-title="Портфолио: Идём в кино">
@@ -112,7 +95,7 @@
             <p class="step-p">Будущий зритель делает 4 шага, прежде, чем окажется в зрительном зале: выбирает сеанс, выбирает место, оплачивает билет, получает электронный билет. Я разработала экран для каждого шага.</p>
             <p class="step-p">Моя любимая часть этого дизайна — перфорация на экране билета :)</p>
             <p class="step-p">На маленьком экране работать со схемой зала кинотеатра без зума практически невозможно, поэтому я решила сделать постоянную заметную подсказку о зуме на экране.</p>
-            <p class="step-p">Оплата обычно осуществляется при помощи сторонних сервисов, поэтому форма оплаты не разрабатывалась.</p>            
+            <p class="step-p">Оплата обычно осуществляется при помощи сторонних сервисов, поэтому форма оплаты не разрабатывалась.</p>
           </div>
           <div class="step-images step-images-quad">
             <a class="step-image-link" href="images/user-sessions.png" target="_blank"><img class="step-image" src="images/user-sessions.png"></a>
