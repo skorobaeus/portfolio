@@ -1,6 +1,383 @@
-*, *::before, *::after {
+:root {
+  --nav-size: clamp(150px, 10vw, 180px);
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Inter Tight", sans-serif;  
+  font-size: 16px;
+  overflow-y: scroll;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+article p, article ul, article ol {
+  font-family: "Inter", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  border-bottom: 1px solid #000;
+  font-weight: 600;
+}
+
+h2 {
+  margin-block-end: 4em;
+}
+
+h3 {
+  margin-block-start: 2em;
+  margin-block-end: 1em;
+}
+
+h4 {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+a {
+  color: #000;
+  font-weight: 600;
+}
+
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;  
+  width: clamp(768px, 85vw, 1200px);
+  margin: 0 auto;  
+  padding: 10vh 50px;
+}
+
+nav {
+  width: var(--nav-size);
+  font-size: 16px;
+  background-color: #FFF;
+}
+
+nav span {
+  display: block;
+  font-weight: 600;
+}
+
+article {
+  width: calc(100% - var(--nav-size) - 10vw);
+  margin-left: auto;
+}
+
+.fixed {
+  position: sticky;
+  top: 10vh;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li+li {
+  margin-top: 0.5em;
+}
+
+.nav-item-active {
+  border-bottom: 1px solid;
+}
+
+nav .fixed>*:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+article ul, article ol {
+  margin-block: 1em;
+  padding-inline-start: 2em;
+}
+
+article ul {
+  list-style-type: square;
+}
+
+article li+li {
+  margin-top: 0.5em;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+.updated {
+  margin-top: 4em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+picture {
+  display: block;
+  margin-block: 2em;
+}
+
+picture::after {
+  content: 'Увеличится по клику';
+  display: block;
+  border-bottom: 1px solid;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 0.85em;
+}
+
+.blank::after {
+  content: 'Посмотреть полный макет по клику';
+}
+
+dialog::backdrop {
+  background: rgb(255 255 255 / 85%);
+}
+
+dialog {
+  margin: auto;
+  width: 75vw;
+  border: none;
+  padding-top: 50px;
+  background-color: transparent;
+}
+
+dialog img {
+  border: 1px solid;
+}
+
+.button-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../svg/close.svg);
+  cursor: pointer;
+}
+
+.button-close-nav {
+  top: 50px;
+  right: 50px;  
+}
+
+.button-close:focus-visible {
+  outline: none;
+}
+
+.button-close:focus-visible::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: calc(50% - 5px);
+  width: 10px;
+  height: 2px;
+  background-color: #000;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;  
+}
+
+.fullsize {
+  margin: 0;
+}
+
+.slider {
+  position: relative;
+  user-select: none;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-active {
+  display: block;
+}
+
+.button-prev, .button-next {
+  position: absolute;
+  top: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  background-image: url(../svg/arrow.svg);
+  background-size: contain;
+  cursor: pointer;
+}
+
+.button-prev {
+  left: -40px;
+  rotate: 180deg;
+} 
+
+.button-next {
+  right: -40px;
+}
+
+.button-prev[aria-disabled="true"],
+.button-next[aria-disabled="true"] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.nav-button-active {
+  text-decoration: underline;
+}
+
+.portfolio-item {
+  display: none;
+}
+
+.portfolio-item-active {
+  display: block;
+}
+
+.button-close-nav {
+  display: none;
+}
+
+.button-open-nav {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+figure {
+  margin-block: 2em;  
+}
+
+figcaption {
+  border-bottom: 1px solid;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-size: 0.85em;
+}
+
+@media (max-width: 768px) {
+  dialog {
+    width: 100%;
+  }
+
+  nav {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid black;
+    z-index: 1;
+  }
+
+  main:has(.opened)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(255 255 255 / 85%);
+    z-index: 0;
+  }
+
+  .fixed {
+    position: static;
+    padding: 50px;
+  }
+
+  .closed {
+    display: none;
+  }  
+
+  main {
+    width: 100%;
+    display: block;
+    padding: 100px 50px;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .button-close-nav {
+    display: block;
+    background-size: contain;
+  }  
+
+  .button-open-nav {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    background-image: url(../svg/burger.svg);
+    background-size: contain;
+    cursor: pointer;    
+  }  
+}
+
+@media (max-width: 375px) {
+  main {
+    padding: 100px 25px;
+  }
+
+  .button-open-nav, .button-close-nav {
+    top: 25px;
+    right: 25px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .fixed {
+      padding: 25px;
+  }
+
+  .button-prev, .button-next {
+    top: calc(50% - 12px);
+    width: 25px;
+    height: 25px;
+  }
+
+  .slider {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+  }
+
+  .button-next {
+    right: -35px;
+  }
+
+  .button-prev {
+    left: -35px;
+  }
+
+
+}
