@@ -23,7 +23,7 @@ article p, article ul, article ol {
 }
 
 h1, h2, h3, h4 {
-  border-bottom: 1px solid #000;
+  border-block-end: 1px solid #000;
   font-weight: 600;
 }
 
@@ -57,8 +57,8 @@ main {
 
 nav {
   width: var(--nav-size);
-  font-size: 16px;
   background-color: #FFF;
+  font-size: 16px;
 }
 
 nav span {
@@ -66,9 +66,9 @@ nav span {
   font-weight: 600;
 }
 
-article {
+.articles {
   width: calc(100% - var(--nav-size) - 10vw);
-  margin-left: auto;
+  margin-inline-start: auto;
 }
 
 .fixed {
@@ -81,15 +81,15 @@ nav ul {
 }
 
 nav ul li+li {
-  margin-top: 0.5em;
+  margin-block-start: 0.5em;
 }
 
 .nav-item-active {
-  border-bottom: 1px solid;
+  border-block-end: 1px solid;
 }
 
 nav .fixed>*:not(:last-child) {
-  margin-bottom: 1em;
+  margin-block-end: 1em;
 }
 
 article ul, article ol {
@@ -102,15 +102,15 @@ article ul {
 }
 
 article li+li {
-  margin-top: 0.5em;
+  margin-block-start: 0.5em;
 }
 
 p + p {
-  margin-top: 1em;
+  margin-block-start: 1em;
 }
 
 .updated {
-  margin-top: 4em;
+  margin-block-start: 4em;
 }
 
 img {
@@ -125,12 +125,15 @@ picture {
 }
 
 picture::after {
-  content: 'Увеличится по клику';
   display: block;
-  border-bottom: 1px solid;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-block-end: 1px solid;
+  padding-block-start: 0.5em;
+  padding-block-end: 0.5em;
   font-size: 0.85em;
+}
+
+.zoom::after, .slide::after {
+  content: 'Увеличится по клику';
 }
 
 .blank::after {
@@ -145,7 +148,7 @@ dialog {
   margin: auto;
   width: 75vw;
   border: none;
-  padding-top: 50px;
+  padding-block-start: 50px;
   background-color: transparent;
 }
 
@@ -254,6 +257,14 @@ dialog img {
   display: none;
 }
 
+.portfolio-item + .portfolio-item {
+  margin-block-start: 100vh;
+}
+
+.portfolio-item:last-of-type {
+  min-height: 80vh;
+}
+
 .portfolio-item-active {
   display: block;
 }
@@ -276,9 +287,9 @@ figure {
 }
 
 figcaption {
-  border-bottom: 1px solid;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  border-block-end: 1px solid;
+  padding-block-start: 0.5em;
+  padding-block-end: 0.5em;
   font-size: 0.85em;
 }
 
@@ -293,7 +304,7 @@ figcaption {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid black;
+    border-block-end: 1px solid black;
     z-index: 1;
   }
 
@@ -357,7 +368,7 @@ figcaption {
   }
 
   .fixed {
-      padding: 25px;
+    padding: 25px;
   }
 
   .button-prev, .button-next {
@@ -378,6 +389,4 @@ figcaption {
   .button-prev {
     left: -35px;
   }
-
-
 }
