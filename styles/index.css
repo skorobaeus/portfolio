@@ -168,11 +168,6 @@ dialog img {
   cursor: pointer;
 }
 
-.button-close-nav {
-  top: 50px;
-  right: 50px;  
-}
-
 .button-close:focus-visible {
   outline: none;
 }
@@ -299,7 +294,7 @@ figcaption {
   }
 
   nav {
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
@@ -331,27 +326,48 @@ figcaption {
     padding: 100px 50px;
   }
 
-  article {
+  .articles {
     width: 100%;
   }
 
   .button-close-nav {
+    top: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
     display: block;
-    background-size: contain;
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
   }  
 
   .button-open-nav {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 50px;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
     border: none;
-    background-color: transparent;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0px 3px 3px 1px rgb(0 0 0 / 25%);     
+    background-color: #FFF;
     background-image: url(../svg/burger.svg);
-    background-size: contain;
-    cursor: pointer;    
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer; 
+  }
+
+  .portfolio-item + .portfolio-item {
+    margin-block-start: 10vh;
+  }
+
+  h2 {
+    margin-block-end: 2em;
   }  
 }
 
@@ -363,8 +379,8 @@ figcaption {
   .button-open-nav, .button-close-nav {
     top: 25px;
     right: 25px;
-    width: 25px;
-    height: 25px;
+    width: 45px;
+    height: 45px;
   }
 
   .fixed {

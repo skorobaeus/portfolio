@@ -1,12 +1,12 @@
 // const navButtons = document.querySelectorAll('.nav-button')
 // const articles = document.querySelectorAll('.portfolio-item')
-// const buttonClose = document.querySelector('.button-close-nav')
-// const buttonOpen = document.querySelector('.button-open-nav')
-// const nav = document.querySelector('nav')
+const buttonClose = document.querySelector('.button-close-nav')
+const buttonOpen = document.querySelector('.button-open-nav')
+const nav = document.querySelector('nav')
 // const buttonActive = 'nav-button-active'
 // const articleActive = 'portfolio-item-active'
-// const navClosed = 'closed'
-// const navOpened = 'opened'
+const navClosed = 'closed'
+const navOpened = 'opened'
 
 // navButtons.forEach((button) => {
 //     button.addEventListener('click', () => {
@@ -29,15 +29,15 @@
 //     })
 // })
 
-// buttonClose.addEventListener('click', () => {
-//     nav.classList.add(navClosed)
-//     nav.classList.remove(navOpened)
-// })
+buttonClose.addEventListener('click', () => {
+    nav.classList.add(navClosed)
+    nav.classList.remove(navOpened)
+})
 
-// buttonOpen.addEventListener('click', () => {
-//     nav.classList.add(navOpened)
-//     nav.classList.remove(navClosed)
-// })
+buttonOpen.addEventListener('click', () => {
+    nav.classList.add(navOpened)
+    nav.classList.remove(navClosed)
+})
 
 // window.addEventListener('scroll', () => {
 //     const visibleArticles = Array.from(articles).filter(article =>
@@ -64,20 +64,16 @@ navButtons.forEach((button) => {
         const articleId = `${button.id}-content`
         const article = document.getElementById(articleId)
 
-        // Показываем артикль, если ещё не виден
         if (article && !article.classList.contains('portfolio-item-active')) {
             article.classList.add('portfolio-item-active')
         }
 
-        // Получаем отступ main
         const main = document.querySelector('main')
         const mainStyles = window.getComputedStyle(main)
         const mainPaddingTop = parseInt(mainStyles.paddingTop) || 0
 
-        // Вычисляем абсолютную позицию артикля
         const articleTop = article.getBoundingClientRect().top + window.pageYOffset
 
-        // Скроллим так, чтобы артикль был под верхом main
         window.scrollTo({
             top: articleTop - mainPaddingTop,
             behavior: 'smooth'
