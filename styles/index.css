@@ -148,7 +148,7 @@ dialog {
   margin: auto;
   width: 75vw;
   border: none;
-  padding-block-start: 50px;
+  padding: 40px;
   background-color: transparent;
 }
 
@@ -165,6 +165,9 @@ dialog img {
   border: none;
   background-color: transparent;
   background-image: url(../svg/close.svg);
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;  
   cursor: pointer;
 }
 
@@ -228,6 +231,14 @@ dialog img {
 
 .button-next {
   right: -40px;
+}
+
+dialog .button-prev {
+  left: 0;
+} 
+
+dialog .button-next {
+  right: 0;
 }
 
 .button-prev[aria-disabled="true"],
