@@ -252,14 +252,6 @@ dialog img {
   display: none;
 }
 
-.portfolio-item + .portfolio-item {
-  margin-block-start: 100vh;
-}
-
-.portfolio-item:last-of-type {
-  min-height: 80vh;
-}
-
 .portfolio-item-active {
   display: block;
 }
@@ -353,7 +345,7 @@ figcaption {
     border: none;
     border-radius: 50%;
     z-index: 1;
-    box-shadow: 0px 3px 3px 1px rgb(0 0 0 / 25%);     
+    box-shadow: 0px 0px 2px 1px rgb(0 0 0 / 15%);
     background-color: #FFF;
     background-image: url(../svg/burger.svg);
     background-size: 25px;
