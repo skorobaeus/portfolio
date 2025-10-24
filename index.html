@@ -29,6 +29,7 @@
           <li class="nav-item"><button class="nav-button" id="js-audit">Аудит дизайн-системы</button></li>
           <li class="nav-item"><button class="nav-button" id="js-system-1">Дизайн-система #1</button></li>
           <li class="nav-item"><button class="nav-button" id="js-system-2">Дизайн-система #2</button></li>
+          <li class="nav-item"><button class="nav-button" id="js-portal">Городской B2C-портал</button></li>
           <li class="nav-item"><button class="nav-button" id="js-animations">Анимации</button></li>
           <li class="nav-item"><button class="nav-button" id="js-ui">Старые добрые лендинги</button></li>
         </ul>        
@@ -370,10 +371,93 @@
         <p>Нарративный директор — Елизавета Золотухина</p>
       </article>
 
+      <article id="js-portal-content" class="portfolio-item">
+        <h2>Портал ЖКХ</h2>
+        
+        <h3>Контекст</h3>
+        <p><a href="https://portalgkh.ru/">Портал ЖКХ</a> это сервис для жителей Иркутска, который позволяет всё общение со службами ЖКХ вести онлайн, начиная от подачи показаний счётчиков и заканчивая вызовом мастера. Сейчас у продукта 100 000+ пользователей, он доступен на Web, iOS и Android.</p>
+
+        <h3>Задача</h3>
+        <p>Когда в 2016 аутсорсный исполнитель сорвал сроки, я взяла на себя разработку внутренних страниц Портала. Я работала совместно с менеджерами проекта, определяющими требования к UI и подаче информации, а в качестве визуального референса использовала разработанный аутсорсером дизайн главной страницы Портала.</p>
+
+        <p>Разработать предстояло навигацию по личному кабинету пользователя и интерфейс страниц этого личного кабинета. Данные на Портале представлены, преимущественно, в табличной форме.</p>
+ 
+        <h3>Решение</h3>
+        <p>«Рабочий стол» это стартовая страница при входе в личный кабинет пользователя. Он предоставляет быстрый доступ к услугам, за которыми жители обращаются чаще всего.</p>
+      
+        <picture class="zoom">
+          <img src="images/portal/portal-desktop.png" onclick="window.portalDesktopFullsize.showModal()">
+        </picture>
+
+        <dialog id="portalDesktopFullsize">
+          <img class="fullsize" src="images/portal/portal-desktop.png">
+          <button class="button-close" onclick="window.portalDesktopFullsize.close()"><span class="visually-hidden">Закрыть</span></button>
+        </dialog>        
+
+        <p>У меня сохранилось фото «бумажного макета» — чтобы найти оптимальное расположение всех необходимых блоков на странице, я вырезала их из бумаги.</p>
+
+        <figure>
+          <img style="width: auto; max-width: 100%; cursor: auto;" src="images/portal/portal-paper.png">
+        </figure>
+
+
+        <p>На странице оплаты, помимо самой формы оплаты, требовалось так же представить историю платежей в табличном виде. Таблица, тянущаяся вширь, определила и дизайн формы оплаты, поэтому я разместила информацию о сумме к оплате и комиссии слева и справа от формы.</p>        
+
+        <picture class="zoom">
+          <img src="images/portal/portal-pay.png" onclick="window.portalPayFullsize.showModal()">
+        </picture>
+
+        <dialog id="portalPayFullsize">
+          <img class="fullsize" src="images/portal/portal-pay.png">
+          <button class="button-close" onclick="window.portalPayFullsize.close()"><span class="visually-hidden">Закрыть</span></button>
+        </dialog>        
+
+        <p>Большая часть контента Портала это таблицы, поэтому было важно сделать их максимально читаемыми. Я использовала чередующуюся подсветку строк, чтобы пользователю легче было вести по строке глазами.</p>
+
+        <picture class="zoom">
+          <img src="images/portal/portal-tables.png" onclick="window.portalTablesFullsize.showModal()">
+        </picture>
+
+        <dialog id="portalTablesFullsize">
+          <img class="fullsize" src="images/portal/portal-tables.png">
+          <button class="button-close" onclick="window.portalTablesFullsize.close()"><span class="visually-hidden">Закрыть</span></button>
+        </dialog>          
+
+        <p>Также нужна была возможность показать комментарии к значениям в ячейках. И эти комментарии тоже могли иметь табличную форму! Я решила отказаться от всплывающих окон и выводить детализацию прямо в таблице, между строк.</p>
+
+        <picture class="zoom">
+          <img src="images/portal/portal-tables-details.png" onclick="window.portalTablesDetailsFullsize.showModal()">
+        </picture>
+
+        <dialog id="portalTablesDetailsFullsize">
+          <img class="fullsize" src="images/portal/portal-tables-details.png">
+          <button class="button-close" onclick="window.portalTablesDetailsFullsize.close()"><span class="visually-hidden">Закрыть</span></button>
+        </dialog>  
+
+        <p>Cегодня я многое сделала бы по-другому. Например, на странице обращений уменьшила бы ширину поля для ввода, чтобы текст легче читался. В истории обращений первым вывела бы текст сообщения, чтобы было легче найти нужное, т.к. пользователи скорее узнают обращение по первым словам, чем по способу подачи.</p>
+
+        <picture class="zoom">
+          <img src="images/portal/portal-text.png" onclick="window.portalTextFullsize.showModal()">
+        </picture>
+
+        <dialog id="portalTextFullsize">
+          <img class="fullsize" src="images/portal/portal-text.png">
+          <button class="button-close" onclick="window.portalTextFullsize.close()"><span class="visually-hidden">Закрыть</span></button>
+        </dialog>         
+
+        <h3>Команда</h3>
+        <p>Менеджеры проекта:</p>
+        <ul>
+          <li>Марина Раковская</li>
+          <li>Филипп Кононов</li>
+        </ul>
+      </article>
+
       <article id="js-animations-content" class="portfolio-item">
         <h2>Анимации</h2>
 
-        <p>Отрисовать анимацию покадрово для передачи разработчику, оживить элементы самостоятельно при помощи CSS-функций, смонтировать ролик в After Effects, воспроизвести UI видеоигры в Photoshop — сделаю всё, что угодно, для передачи смысла.</p>
+        <h3>Контекст</h3>
+        <p>Отрисовать анимацию покадрово для передачи разработчику, оживить элементы самостоятельно при помощи CSS-функций, смонтировать ролик в After Effects, воспроизвести UI видеоигры в Photoshop — сделаю всё, что угодно, для передачи смысла. Или найду исполнителя.</p>
 
         <h3>SVG-анимации в стиле Pixel Art</h3>
 
