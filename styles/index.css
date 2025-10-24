@@ -132,7 +132,7 @@ picture::after {
   font-size: 0.85em;
 }
 
-.zoom::after, .slide::after {
+picture.zoom::after, picture.slide::after, .zoom figcaption::after {
   content: 'Увеличится по клику';
 }
 
@@ -275,12 +275,12 @@ dialog .button-next {
   display: none;
 }
 
-iframe {
+iframe, video {
   width: 100%;
   border: none;
 }
 
-figure {
+figure, video {
   margin-block: 2em;  
 }
 
