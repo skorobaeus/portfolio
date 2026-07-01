@@ -241,7 +241,7 @@ main {
   text-transform: none;
 }
 
-.text-columns-content, .graphics {
+.text-columns-content, .graphics, .slider {
   width: calc(var(--column) * 8 + var(--gap) * 7);
 }
 
@@ -267,12 +267,12 @@ main {
   padding-inline-start: var(--gap);
 }
 
-.graphics {
+.graphics, .slider {
   margin-block-start: var(--column);
   margin-inline-start: auto;
 }
 
-.graphics img {
+.graphics img, .slider img {
   display: block;
   width: 100%;
   box-shadow: 7px 7px 0px 0px #000000;
@@ -316,12 +316,12 @@ main {
 }
 
 .button-prev {
-  left: -40px;
+  left: 0;
   rotate: 180deg;
 } 
 
 .button-next {
-  right: -40px;
+  right: 0;
 }
 
 dialog .button-prev {
