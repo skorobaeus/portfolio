@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Разработка дизайн-системы для онлайн-курса</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/manifest.json">  
+</head>
+<body>
+  <header class="case-intro">
+    <div class="specs-container">
+      <time>2024 год</time>
+      <span>Figma, иллюстрация</span>
+    </div>
+    <div class="title-container">
+      <span class="type">Разработка ДС</span>
+      <h1>
+        <span class="title">Разработка дизайн-системы для онлайн-курса</span>
+      </h1>
+      <span class="elaboration">Комиксы, Шекспир и физкультура — как мы делали онлайн-образование красивым и нескучным</span>
+    </div>
+    <div class="cover" style="background-image: url('../images/ds2/cover.png'); background-color: #FFB3E5;"></div>
+  </header>
+
+  <main class="case-content">
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Контекст</h2></div>
+      <div class="text-columns-content text-columns-content--s">
+        <p>Яндекс Практикум — центр обучения IT-профессиям. Особенность Практикума — асинхронный формат и упор на практические навыки. Студенты знакомятся с материалом в удобное для себя время и тут же практикуются в тренажёре.</p>
+        <p>Тренажёр — миниатюрная веб-страница, встроенная в текст урока, в которую студент должен дописать недостающий код.</p>
+        <p><a href="https://practicum.yandex.ru/html-css/">VЁRSTKA</a> — курс Практикума по HTML и CSS вёрстке, в работе над которым я участвовала как продуктовый дизайнер.</p>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/ds2/reference.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Задача</h2></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>У курсов Практикума мощная визуальная идентичность: иллюстрации, инфографика и увлекательный нарратив — всё работает на вовлечение студентов. Тренажёр — место, где код встречается с интерфейсом — должен выглядеть не как чужой элемент, а органично вписываться в эту эстетику.</p>
+
+        <p>Над написанием курса VЁRSTKA работали 4 разработчика с разным уровнем — от джуна до сениора. Моей задачей было разработать дизайн-систему, которая обеспечит единообразие визуального оформления тренажёров и их соответствие стилю всего продукта, несмотря на разницу в опыте разработчиков.</p>
+      </div>
+    </section>
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Решение</h2></div>
+      <div class="text-columns-content text-columns-content--s">
+        <p>Инструментов на старте у меня было только два: визуальный референс от ведущего иллюстратора и собственный опыт прохождения курсов по веб-вёрстке, давший мне представление о том, как устроено обучение в тренировочной среде, т.е. что именно я буду дизайнить.</p>
+
+        <p>Я выделила ключевые элементы изобразительного языка, чтобы опираться на них:</p>
+
+        <ul>
+          <li>контраст тонкой линии и жирного текста;</li>
+          <li>плотная компоновка элементов;</li>
+          <li>яркие фирменные цвета;</li>
+          <li>умышленное нарушение правил.</li>
+        </ul>
+
+        <p>Также я учла ограничения. Особенность тренировочной среды в том, что это не готовый веб-сайт, а анатомическое пособие по веб-разработке. Код каждого урока преподаватель собирает вручную, оставляя в нём лакуны, которые потом будет заполнять студент. Поэтому код должен быть предельно простым и объяснимым.</p>
+
+        <p>В рамках этого стиля и ограничений я разработала и сверстала базовые веб-элементы — от заголовков до форм, — чтобы авторы курса могли быстро собирать тренажёры из готовых «кирпичиков».</p>
+      </div>
+    </section>
+
+    <div class="slider">
+      <picture class="slide slide-active">
+        <img src="../images/ds2/rules1.png">
+      </picture>
+      <picture class="slide">
+        <img src="../images/ds2/rules2.png">
+      </picture>
+      <picture class="slide">
+        <img src="../images/ds2/rules3.png">
+      </picture>
+      <button class="button-prev" aria-disabled="true"></button>
+      <button class="button-next" aria-disabled="false"></button>
+    </div>    
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Результат</h2></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>Моя дизайн-система позволила интегрировать тренажёры бесшовно в общую визуальную экосистему курса, поддерживая и усиливая его нарратив. Благодаря ей:</p>
+
+        <ul>
+          <li>курс вышел в срок — за 20 месяцев;</li>
+          <li>работа 4 разработчиков с разным опытом была скоординирована и едина;</li>
+          <li>появилась база для дальнейшей поддержки и масштабирования курса.</li>
+        </ul>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/ds2/contents.png">
+      </picture>
+    </figure>    
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Команда</h2></div>
+      <div class="text-columns-content text-columns-content--s credits">
+        <p>Тимлид, автор уроков — Александр Патлух</p>
+        
+        <p>Авторы уроков:</p>
+        <ul>
+          <li>Алёна Батицкая</li>
+          <li>Алексей Казаков</li>
+          <li>Наталия Рыжова</li>
+        </ul>
+        <p>Ведущий иллюстратор — Анна Римша</p>
+        <p>Нарративный директор — Елизавета Золотухина</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../scripts/slider.js"></script>
+</body>
+</html>
