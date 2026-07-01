@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Портал ЖКХ</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/index.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/manifest.json">  
+</head>
+<body>
+  <header class="case-intro">
+    <div class="specs-container">
+      <time>2016 год</time>
+      <span>Photoshop</span>
+    </div>
+    <div class="title-container">
+      <span class="type">UI-дизайн</span>
+      <h1>
+        <span class="title">Портал ЖКХ</span>
+      </h1>
+      <span class="elaboration">Сделать пугающие платёжки за коммуналку красивыми, а ежемесячные платежи — удобными</span>
+    </div>
+    <div class="cover" style="background-image: url(../images/portal/cover.png), url(../images/portal/cover2.jpg); background-size: contain, cover;"></div>
+  </header>
+
+  <main class="case-content">
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Контекст</h2></div>
+      <div class="text-columns-content text-columns-content--s">
+        <p><a href="https://portalgkh.ru/">Портал ЖКХ</a> это сервис для жителей Иркутска, который позволяет всё общение со службами ЖКХ вести онлайн, начиная от подачи показаний счётчиков и заканчивая вызовом мастера. Сейчас у продукта 100 000+ пользователей, он доступен на Web, iOS и Android.</p>
+      </div>
+    </section>
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Задача</h2></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>Когда в 2016 аутсорсный исполнитель сорвал сроки, я взяла на себя разработку внутренних страниц Портала. Я работала совместно с менеджерами проекта, определяющими требования к UI и подаче информации, а в качестве визуального референса использовала разработанный аутсорсером дизайн главной страницы Портала.</p>
+
+        <p>Разработать предстояло навигацию по личному кабинету пользователя и интерфейс страниц этого личного кабинета. Данные на Портале представлены, преимущественно, в табличной форме.</p>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/portal/portal-desktop.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Решение</h2></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>«Рабочий стол» это стартовая страница при входе в личный кабинет пользователя. Он предоставляет быстрый доступ к услугам, за которыми жители обращаются чаще всего.</p>
+
+        <p>У меня сохранилось фото «бумажного макета» — чтобы найти оптимальное расположение всех необходимых блоков на странице, я вырезала их из бумаги.</p>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <img src="../images/portal/portal-paper.png" style="width: auto; max-width: 100%; cursor: auto;">
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>На странице оплаты, помимо самой формы оплаты, требовалось так же представить историю платежей в табличном виде. Таблица, тянущаяся вширь, определила и дизайн формы оплаты, поэтому я разместила информацию о сумме к оплате и комиссии слева и справа от формы.</p>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/portal/portal-pay.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"></div>
+      <div class="text-columns-content text-columns-content--l">  
+        <p>Большая часть контента Портала это таблицы, поэтому было важно сделать их максимально читаемыми. Я использовала чередующуюся подсветку строк, чтобы пользователю легче было вести по строке глазами.</p>
+      </div>
+    </section>
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/portal/portal-tables.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"></div>
+      <div class="text-columns-content text-columns-content--l">
+        <p>Также нужна была возможность показать комментарии к значениям в ячейках. И эти комментарии тоже могли иметь табличную форму! Я решила отказаться от всплывающих окон и выводить детализацию прямо в таблице, между строк.</p>
+      </div>
+    </section>        
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/portal/portal-tables-details.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"></div>
+      <div class="text-columns-content text-columns-content--l"> 
+        <p>Cегодня я многое сделала бы по-другому. Например, на странице обращений уменьшила бы ширину поля для ввода, чтобы текст легче читался. В истории обращений первым вывела бы текст сообщения, чтобы было легче найти нужное, т.к. пользователи скорее узнают обращение по первым словам, чем по способу подачи.</p>
+      </div>
+    </section>        
+
+    <figure class="graphics">
+      <picture>
+        <img src="../images/portal/portal-text.png">
+      </picture>
+    </figure>
+
+    <section class="text-columns">
+      <div class="text-columns-title"><h2>Команда</h2></div>
+      <div class="text-columns-content text-columns-content--s credits">
+        <p>Менеджеры проекта:</p>
+        <ul>
+          <li>Марина Раковская</li>
+          <li>Филипп Кононов</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
