@@ -303,9 +303,14 @@ main {
   display: block;
 }
 
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap);
+  margin-block-start: var(--gap);
+}
+
 .button-prev, .button-next {
-  position: absolute;
-  top: calc(50% - 15px);
   width: 30px;
   height: 30px;
   border: none;
@@ -316,21 +321,8 @@ main {
 }
 
 .button-prev {
-  left: 0;
   rotate: 180deg;
 } 
-
-.button-next {
-  right: 0;
-}
-
-dialog .button-prev {
-  left: 0;
-} 
-
-dialog .button-next {
-  right: 0;
-}
 
 .button-prev[aria-disabled="true"],
 .button-next[aria-disabled="true"] {
